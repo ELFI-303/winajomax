@@ -1,9 +1,12 @@
 
-//package com.wina.jo.max.demo.Entity;
+package com.wina.jo.max.demo.Entity;
 
 import jakarta.persistence.*;
+import jakarta.xml.bind.annotation.XmlRootElement;
+
 @Entity
 @Table(name = "CUSTOMER")
+@XmlRootElement
 public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -14,20 +17,37 @@ public class Customer {
     @Column(name = "CUSTOMER_EMAIL")
     private String customerEmail;
     @Column(name = "CUSTOMER_SOLDE")
-    private Long customerSolde;
+    private Double customerSolde;
     @Column(name = "CUSTOMER_PASSWORD")
     private String customerPassword;
-    @Enumerated(EnumType.STRING)
     @Column(name = "CUSTOMER_GENDER")
-    private CustomerGender customerGender;
-    @Enumerated(EnumType.STRING)
+    private String customerGender;
     @Column(name = "CUSTOMER_ROLE")
-    private CustomerRole customerRole;
+    private String customerRole;
 
-    public enum CustomerGender {
-        MALE,FEMALE
+
+    public Customer(Long customerId, String customerName, String customerEmail, Double customerSolde,String customerPassword, String customerGender, String customerRole){
+        this.customerId = customerId;
+        this.customerName = customerName;
+        this.customerEmail = customerEmail;
+        this.customerPassword = customerPassword;
+        this.customerSolde = customerSolde;
+        this.customerGender = customerGender;
+        this.customerRole = customerRole;
     }
-    public enum CustomerRole {
-        ADMIN,USER
+    public Customer() {
+
+    }
+
+    public Double getCustomerSolde() {
+        return customerSolde;
+    }
+
+    public void setCustomerSolde(Double customerSolde) {
+        this.customerSolde = customerSolde;
+    }
+
+    public void setCustomerPassword(String customerPassword) {
+        this.customerPassword = customerPassword;
     }
 }
