@@ -33,7 +33,7 @@ Spring Boot accélère le développement logiciel en proposant un ensemble de co
 
 Concrètement, Spring Boot se présente sous la forme d'un POM parent et de dépendances -- a.k.a. des "starters" -- (Maven ou Gradle).
 
-### 1.5 Récupération des données via curl
+### 1.5 Intéractions avec les données via curl
 ```
 // GET /customer
 $ curl -X GET http://localhost:8080/demo/customer -i
