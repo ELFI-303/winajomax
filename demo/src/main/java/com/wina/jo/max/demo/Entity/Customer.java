@@ -6,7 +6,6 @@ import jakarta.xml.bind.annotation.XmlRootElement;
 
 @Entity
 @Table(name = "CUSTOMER")
-@XmlRootElement
 public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -49,5 +48,31 @@ public class Customer {
 
     public void setCustomerPassword(String customerPassword) {
         this.customerPassword = customerPassword;
+    }
+
+    public void setCustomerId(Long id){ this.customerId = customerId; }
+
+    public String getCustomerName() {
+        return customerName;
+    }
+
+    public String getCustomerEmail() {
+        return customerEmail;
+    }
+
+    public String getCustomerGender() {
+        return customerGender;
+    }
+
+    public Long getCustomerId() {
+        return customerId;
+    }
+
+    public String getCustomerPassword() {
+        return customerPassword;
+    }
+
+    public String getCustomerRole() {
+        return customerRole;
     }
 }

@@ -10,6 +10,6 @@ import java.util.List;
 
 @Component
 public interface GambleEventRepository extends JpaRepository<GambleEvent,Long> {
-    @Query(value = "SELECT * FROM GAMBLE_EVENT WHERE USER_ID = :customerId", nativeQuery = true)
+    @Query(value = "SELECT * FROM GAMBLE_EVENT WHERE GAMBLE_EVENT_CUSTOMER_ID = :customerId", nativeQuery = true)
     List<GambleEvent> getCustomerGambles(@Param("customerId") Long customerId);
 }

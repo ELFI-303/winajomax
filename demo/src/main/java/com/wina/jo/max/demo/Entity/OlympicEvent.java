@@ -5,7 +5,6 @@ import jakarta.xml.bind.annotation.XmlRootElement;
 
 @Entity
 @Table(name = "OLYMPIC_EVENT")
-@XmlRootElement
 public class OlympicEvent {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
