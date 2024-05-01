@@ -27,7 +27,7 @@ import static java.lang.Long.parseLong;
 public class CustomerService {
     @Autowired
     private CustomerRepository customerRepository;
-    @PostConstruct
+    
     public Long getUserId(){
         if (SecurityContextHolder.getContext().getAuthentication() != null){
             return parseLong(SecurityContextHolder.getContext().getAuthentication().getCredentials().toString());
