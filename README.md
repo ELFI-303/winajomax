@@ -40,17 +40,17 @@ $ curl -X GET http://localhost:8080/demo/customer -i
     -H "username: Jean"
     -H "password: jeanbg"
     -H "Content-Type: application/json"
-// GET /customer
+// GET /olympic
 $ curl -X GET http://localhost:8080/demo/olympic -i
-    -H "username: Jean"
-    -H "password: jeanbg"
+    -H "username: "
+    -H "password: "
     -H "Content-Type: application/json"
-// GET /customer
+// GET /gamble
 $ curl -X GET http://localhost:8080/demo/gamble -i
     -H "username: Jean"
     -H "password: jeanbg"
     -H "Content-Type: application/json"
-// POST /demo/gamble
+// POST /gamble
 $ curl -X POST http://localhost:8080/api/demo/gamble -i
     -H "Accept: application/json"
     -H "Content-Type: application/json"
